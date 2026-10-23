@@ -34,6 +34,28 @@ export function GsapScrollExperience({ root, routeKey, locale }: GsapScrollExper
         return !section.closest('[role="dialog"]') && !section.hasAttribute('data-gsap-ignore');
       });
 
+      // The first section keeps its route-transition entrance, but its
+      // full-bleed photograph can still drift under the copy as the page
+      // starts to move. This is the one scroll-linked cue above the fold.
+      const introImage = sections[0]?.querySelector<HTMLElement>(':scope > img');
+      if (desktop && introImage) {
+        gsap.fromTo(
+          introImage,
+          { yPercent: -2, scale: 1.06 },
+          {
+            yPercent: 5,
+            scale: 1.12,
+            ease: 'none',
+            scrollTrigger: {
+              trigger: sections[0],
+              start: 'top top',
+              end: 'bottom top',
+              scrub: 0.8,
+            },
+          },
+        );
+      }
+
       // The first section owns the page entrance (hero / page hero). Route
       // transitions already animate it, so only the sections below are staged.
       const scrollSections = sections.slice(1);
