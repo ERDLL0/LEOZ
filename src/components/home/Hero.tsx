@@ -1,4 +1,5 @@
 import { Fragment, useEffect, useRef, useState } from 'react';
+import { createPortal } from 'react-dom';
 import { motion, useReducedMotion, useScroll, useTransform } from 'framer-motion';
 import { ChevronDown, Play, X } from 'lucide-react';
 import { useLocale } from '@/i18n/LocaleContext';
@@ -152,69 +153,71 @@ export function Hero() {
         </div>
       </motion.div>
 
-      {filmOpen && (
-        <div
-          role="dialog"
-          aria-modal="true"
-          aria-labelledby="leoz-film-title"
-          aria-describedby="leoz-film-description"
-          className="fixed inset-0 z-50 flex items-center justify-center bg-obsidian/90 p-4 backdrop-blur-md"
-          onClick={() => setFilmOpen(false)}
-        >
+      {filmOpen &&
+        createPortal(
           <div
-            ref={filmDialogRef}
-            className="relative w-full max-w-3xl overflow-hidden rounded-lg border border-line bg-carbon p-2"
-            onClick={(e) => e.stopPropagation()}
+            role="dialog"
+            aria-modal="true"
+            aria-labelledby="leoz-film-title"
+            aria-describedby="leoz-film-description"
+            className="fixed inset-0 z-50 flex items-center justify-center bg-obsidian/90 p-4 backdrop-blur-md"
+            onClick={() => setFilmOpen(false)}
           >
-            <button
-              ref={filmCloseRef}
-              type="button"
-              onClick={() => setFilmOpen(false)}
-              className="absolute end-4 top-4 z-10 flex h-11 w-11 items-center justify-center rounded-[8px] bg-obsidian/80 text-ivory transition-colors hover:text-brass"
-              aria-label={dict.common.film.close}
+            <div
+              ref={filmDialogRef}
+              className="relative w-full max-w-3xl overflow-hidden rounded-lg border border-line bg-carbon p-2"
+              onClick={(e) => e.stopPropagation()}
             >
-              <X size={18} />
-            </button>
-            <div className="relative aspect-video w-full overflow-hidden rounded bg-obsidian">
-              {FILM_FRAMES.map((source, index) => (
-                <img
-                  key={source}
-                  src={source}
-                  alt=""
+              <button
+                ref={filmCloseRef}
+                type="button"
+                onClick={() => setFilmOpen(false)}
+                className="absolute end-4 top-4 z-10 flex h-11 w-11 items-center justify-center rounded-[8px] bg-obsidian/80 text-ivory transition-colors hover:text-brass"
+                aria-label={dict.common.film.close}
+              >
+                <X size={18} />
+              </button>
+              <div className="relative aspect-video w-full overflow-hidden rounded bg-obsidian">
+                {FILM_FRAMES.map((source, index) => (
+                  <img
+                    key={source}
+                    src={source}
+                    alt=""
+                    aria-hidden="true"
+                    loading={index === 0 ? 'eager' : 'lazy'}
+                    decoding="async"
+                    className={`absolute inset-0 h-full w-full object-cover brightness-[0.62] transition-opacity duration-1000 ease-out ${
+                      index === filmFrame ? 'opacity-100' : 'opacity-0'
+                    }`}
+                  />
+                ))}
+                <div
+                  className="absolute inset-0 bg-gradient-to-t from-obsidian/80 via-obsidian/20 to-obsidian/25"
                   aria-hidden="true"
-                  loading={index === 0 ? 'eager' : 'lazy'}
-                  decoding="async"
-                  className={`absolute inset-0 h-full w-full object-cover brightness-[0.62] transition-opacity duration-1000 ease-out ${
-                    index === filmFrame ? 'opacity-100' : 'opacity-0'
-                  }`}
                 />
-              ))}
-              <div
-                className="absolute inset-0 bg-gradient-to-t from-obsidian/80 via-obsidian/20 to-obsidian/25"
-                aria-hidden="true"
-              />
-              <div className="absolute inset-0 flex flex-col items-center justify-center p-6 text-center">
-                <span className="font-display text-2xl text-ivory md:text-3xl">
-                  <span id="leoz-film-title">LEOZ GENTS SALON</span>
-                </span>
-                <p id="leoz-film-description" className="mt-2 max-w-md text-sm text-bone">
-                  {dict.common.film.pending}
-                </p>
-                <button
-                  type="button"
-                  className="btn btn-primary mt-6 !min-h-11 px-6 text-xs uppercase tracking-wider"
-                  onClick={() => {
-                    setFilmOpen(false);
-                    open('book');
-                  }}
-                >
-                  {dict.common.cta.claimChair}
-                </button>
+                <div className="absolute inset-0 flex flex-col items-center justify-center p-6 text-center">
+                  <span className="font-display text-2xl text-ivory md:text-3xl">
+                    <span id="leoz-film-title">LEOZ GENTS SALON</span>
+                  </span>
+                  <p id="leoz-film-description" className="mt-2 max-w-md text-sm text-bone">
+                    {dict.common.film.pending}
+                  </p>
+                  <button
+                    type="button"
+                    className="btn btn-primary mt-6 !min-h-11 px-6 text-xs uppercase tracking-wider"
+                    onClick={() => {
+                      setFilmOpen(false);
+                      open('book');
+                    }}
+                  >
+                    {dict.common.cta.claimChair}
+                  </button>
+                </div>
               </div>
             </div>
-          </div>
-        </div>
-      )}
+          </div>,
+          document.body,
+        )}
     </section>
   );
 }
