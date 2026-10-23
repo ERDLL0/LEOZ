@@ -1,0 +1,40 @@
+{
+  "brandName": "Leoz Gents Salon",
+  "tagline": "A modern gentleman’s club.",
+  "productionOrigin": null,
+  "navigation": [
+    { "label": "Locations", "href": "/#locations" },
+    { "label": "Services", "href": "/services" },
+    { "label": "Barbers", "href": "/barbers" },
+    { "label": "The ritual", "href": "/the-ritual" },
+    { "label": "Pride Club", "href": "/pride-club" },
+    { "label": "Journal", "href": "/journal" }
+  ],
+  "menuNavigation": [
+    { "label": "Locations", "href": "/#locations" },
+    { "label": "Services", "href": "/services" },
+    { "label": "Barbers", "href": "/barbers" },
+    { "label": "The ritual", "href": "/the-ritual" },
+    { "label": "Pride Club", "href": "/pride-club" },
+    { "label": "Journal", "href": "/journal" },
+    { "label": "Contact", "href": "/contact" }
+  ],
+  "exploreLinks": [
+    { "label": "Grooming", "href": "/services" },
+    { "label": "Our barbers", "href": "/barbers" },
+    { "label": "The ritual", "href": "/the-ritual" }
+  ],
+  "worldLinks": [
+    { "label": "Our story", "href": "/about" },
+    { "label": "Pride Club", "href": "/pride-club" },
+    { "label": "Journal", "href": "/journal" },
+    { "label": "Contact", "href": "/contact" }
+  ],
+  "legal": [
+    { "label": "Privacy", "href": "/privacy" },
+    { "label": "Terms", "href": "/terms" }
+  ],
+  "social": [],
+  "verified": false,
+  "source": "Supplied master brief: canonical brand and primary navigation; production origin, legal links and social profiles pending approval"
+}

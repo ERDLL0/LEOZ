@@ -1,0 +1,46 @@
+[
+  {
+    "slug": "a-better-barber-consultation",
+    "category": "THE DETAILS",
+    "title": "A better cut starts with a conversation.",
+    "image": "/images/craft.webp",
+    "body": [
+      "Bring a reference, but bring your routine too. How you wear your hair on an ordinary morning is as useful as a photograph of how you want it to look.",
+      "Talk about what you want to keep, what you want to change, and how much time you want to spend styling. A clear conversation gives your barber a useful starting point.",
+      "Before you leave, ask how to recreate the finish. The right questions can help make your next appointment more considered."
+    ],
+    "author": null,
+    "publishedAt": null,
+    "verified": false,
+    "source": null
+  },
+  {
+    "slug": "make-time-for-yourself",
+    "category": "THE RITUAL",
+    "title": "The art of making time for yourself.",
+    "image": "/images/ritual.webp",
+    "body": [
+      "A grooming appointment can be a small pause in a busy day. Put it in the calendar with the same intention as anything else that deserves your attention.",
+      "Think about what you want from the visit before you arrive. A simple refresh and a complete change start with different conversations.",
+      "Choose a rhythm that works for your look and your routine. Consistency starts with something you can make time for."
+    ],
+    "author": null,
+    "publishedAt": null,
+    "verified": false,
+    "source": null
+  },
+  {
+    "slug": "two-sides-of-dubai",
+    "category": "THE CITY",
+    "title": "One city. Two different rhythms.",
+    "image": "/images/palm.webp",
+    "body": [
+      "Palm Jumeirah and DIFC give the Leoz experience two distinct settings. The creative direction for Palm is warm and unhurried; DIFC takes on a more architectural, focused mood.",
+      "Explore each location page to find your preferred setting. Confirm the approved branch details and booking options before planning your visit."
+    ],
+    "author": null,
+    "publishedAt": null,
+    "verified": false,
+    "source": null
+  }
+]

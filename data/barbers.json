@@ -1,0 +1,41 @@
+[
+  {
+    "id": "omar-al-farsi",
+    "slug": "omar-al-farsi",
+    "name": "Omar Al-Farsi",
+    "branchIds": ["palm-jumeirah"],
+    "specialties": ["Classic haircut", "Straight razor shave", "Beard sculpting"],
+    "languages": ["Arabic", "English"],
+    "biography": "Staging placeholder. Approved staff biography pending.",
+    "portrait": "/images/craft.webp",
+    "bookingUrl": null,
+    "verified": false,
+    "source": "Staging placeholder — pending staff approval"
+  },
+  {
+    "id": "luca-rossi",
+    "slug": "luca-rossi",
+    "name": "Luca Rossi",
+    "branchIds": ["difc"],
+    "specialties": ["Modern taper", "Beard trim", "Hot towel shave"],
+    "languages": ["English", "Italian"],
+    "biography": "Staging placeholder. Approved staff biography pending.",
+    "portrait": "/images/craft.webp",
+    "bookingUrl": null,
+    "verified": false,
+    "source": "Staging placeholder — pending staff approval"
+  },
+  {
+    "id": "zayed-al-mansouri",
+    "slug": "zayed-al-mansouri",
+    "name": "Zayed Al-Mansouri",
+    "branchIds": ["palm-jumeirah", "difc"],
+    "specialties": ["Fade", "Hair colour refresh", "Facial grooming"],
+    "languages": ["Arabic", "English"],
+    "biography": "Staging placeholder. Approved staff biography pending.",
+    "portrait": "/images/craft.webp",
+    "bookingUrl": null,
+    "verified": false,
+    "source": "Staging placeholder — pending staff approval"
+  }
+]

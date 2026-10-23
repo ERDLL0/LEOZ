@@ -1,0 +1,10 @@
+[
+  { "path": "/images/lion.webp", "role": "brand crest (temporary, replaced by app/icon.png)", "alt": "", "rights": null, "productionApproved": false },
+  { "path": "/images/interior.webp", "role": "home hero and space imagery", "alt": "Concept interior of a warm, wood-panelled gentleman’s grooming club", "rights": null, "productionApproved": false },
+  { "path": "/images/palm.webp", "role": "Palm Jumeirah location card", "alt": "Concept cityscape for Palm Jumeirah", "rights": null, "productionApproved": false },
+  { "path": "/images/difc.webp", "role": "DIFC location card", "alt": "Concept cityscape for DIFC", "rights": null, "productionApproved": false },
+  { "path": "/images/craft.webp", "role": "service and craft imagery", "alt": "Concept artwork of barber craftsmanship", "rights": null, "productionApproved": false },
+  { "path": "/images/beard.webp", "role": "beard and shave service imagery", "alt": "Concept artwork for beard services", "rights": null, "productionApproved": false },
+  { "path": "/images/ritual.webp", "role": "ritual banner and service imagery", "alt": "Concept artwork for the Leoz ritual", "rights": null, "productionApproved": false },
+  { "path": "/images/club.webp", "role": "Pride Club banner", "alt": "Concept artwork for the Pride Club", "rights": null, "productionApproved": false }
+]

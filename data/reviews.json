@@ -1,0 +1,32 @@
+[
+  {
+    "id": "google-palm-snapshot",
+    "branchId": "palm-jumeirah",
+    "branchName": "Palm Jumeirah",
+    "rating": 4.9,
+    "reviewCount": 95,
+    "snapshotLabel": "Verified aggregate snapshot",
+    "quote": null,
+    "reviewerName": null,
+    "reviewDate": null,
+    "sourceUrl": null,
+    "verified": true,
+    "source": "Google aggregate snapshot",
+    "integrationStatus": "pending"
+  },
+  {
+    "id": "google-difc-snapshot",
+    "branchId": "difc",
+    "branchName": "DIFC / Sky Gardens",
+    "rating": 5.0,
+    "reviewCount": 46,
+    "snapshotLabel": "Verified aggregate snapshot",
+    "quote": null,
+    "reviewerName": null,
+    "reviewDate": null,
+    "sourceUrl": null,
+    "verified": true,
+    "source": "Google aggregate snapshot",
+    "integrationStatus": "pending"
+  }
+]
