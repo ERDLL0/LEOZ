@@ -126,7 +126,7 @@ describe('LEOZ Gents Salon Application', () => {
     const scrollTo = vi.spyOn(window, 'scrollTo');
     renderAt('/en');
 
-    await user.click(screen.getAllByRole('link', { name: /Leoz Gents Salon — home/i })[0]);
+    await user.click(screen.getAllByRole('link', { name: /LEOZ\s*GENTS\s*SALON/i })[0]);
     expect(scrollTo).toHaveBeenCalledWith({ top: 0, behavior: 'smooth' });
   });
 
